@@ -1,6 +1,6 @@
 {
-  "name": "tti-polyfill",
-  "version": "0.2.2",
+  "name": "time-to-interactive-polyfill",
+  "version": "0.2.3",
   "description": "Polyfill for Time to Interactive. See https://goo.gl/OSmrPk",
   "main": "tti-polyfill.js",
   "scripts": {
@@ -9,17 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GoogleChrome/tti-polyfill.git"
+    "url": "git+https://github.com/almog-geva/tti-polyfill.git"
   },
   "contributors": [
     "Deepanjan Roy (Google)",
     "Philip Walton <philip@philipwalton.com> (https://philipwalton.com/)"
   ],
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/GoogleChrome/tti-polyfill/issues"
-  },
-  "homepage": "https://github.com/GoogleChrome/tti-polyfill#readme",
+  "homepage": "https://github.com/almog-geva/tti-polyfill",
   "devDependencies": {
     "chalk": "^1.1.3",
     "eslint": "^4.0.0",
