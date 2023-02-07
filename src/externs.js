@@ -51,7 +51,9 @@ function PerformanceObserverEntry() {}
 /**
  * Options for the PerformanceObserver.
  * @typedef {{
- *   entryTypes: (Array<string>),
+ * entryTypes: (Array<string>|undefined),
+ * type: (string|undefined),
+ * buffered: (boolean|undefined),
  * }}
  */
 var PerformanceObserverInit;

@@ -193,7 +193,8 @@ export default class FirstConsistentlyInteractiveDetector {
         }
       }
     });
-    this._performanceObserver.observe({entryTypes: ['longtask', 'resource']});
+    this._performanceObserver.observe({type: 'longtask', buffered: true});
+    this._performanceObserver.observe({type: 'resource', buffered: true});
   }
 
   /**
