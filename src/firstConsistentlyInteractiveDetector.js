@@ -344,11 +344,13 @@ export default class FirstConsistentlyInteractiveDetector {
         firstConsistentlyInteractiveCore.computeLastKnownNetwork2Busy(
             this._incompleteRequestStarts, this._networkRequests);
 
-    // First paint is not available in non-chrome browsers at the moment.
-    const firstPaint = window.chrome && window.chrome.loadTimes ?
-        (window.chrome.loadTimes().firstPaintTime * 1000 - navigationStart) : 0;
+    const fcpEntry = window.performance.getEntriesByName(
+        'first-contentful-paint'
+    )[0];
 
-    const searchStart = firstPaint || (
+    const fcp = fcpEntry ? fcpEntry.startTime : undefined;
+
+    const searchStart = fcp || (
         performance.timing.domContentLoadedEventEnd - navigationStart);
 
     const minValue = this._getMinValue();
